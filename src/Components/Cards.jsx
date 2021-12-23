@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css'
-import CurrentCard from './CurrentCard.jsx'
+//import CurrentCard from './CurrentCard.jsx'
 
 class Cards extends React.Component {
   state = {
@@ -31,7 +31,7 @@ class Cards extends React.Component {
     if(newElement) {
       newElement.likes = this.state.cards[this.state.currentCard].likes + 1;
     }
-    return this.setState({defaul: [... this.state.cards]})
+    return this.setState({defaul: [...this.state.cards]})
   };
   
   addDisLike = () => {
@@ -39,7 +39,7 @@ class Cards extends React.Component {
     if(newElem) {
       newElem.dislikes = this.state.cards[this.state.currentCard].dislikes + 1;
     }
-    return this.setState({defaul: [... this.state.cards]})
+    return this.setState({defaul: [...this.state.cards]})
   };
 
   showNextCard = () => {
