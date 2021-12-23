@@ -1,6 +1,48 @@
 .container {
     margin: 0 auto;
-    border: 1px solid plum;
+    border: 1px solid rgb(77, 105, 176);
     width: 400px;
-    height: 600px;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    position: relative; 
+}
+.likesBlock {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+.likesCount {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(77, 105, 176);
+}
+.like-image,
+.dislike-image {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat; 
+}
+.like-image {
+    background-image: url('../Images/like.png');
+}
+.dislike-image {
+    background-image: url('../Images/dislike.png');
+}
+.butt {
+    width: 52px;
+    height: 52px;
+    border: none;
+}
+.prev {
+    background-image: url('../Images/left.png');
+}
+.next {
+    background-image: url('../Images/right.png');
 }

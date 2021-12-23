@@ -8,19 +8,19 @@ class Cards extends React.Component {
     cards: [
       {
         id: 333,
-        img: 'https://picsum.photos/200/300?random=1',
+        img: 'https://picsum.photos/300/400?random=1',
         likes: 0,
         dislikes: 0
       },
       {
         id: 332,
-        img: 'https://picsum.photos/200/300?random=2',
+        img: 'https://picsum.photos/300/400?random=2',
         likes: 0,
         dislikes: 0
       },
       {
         id: 330,
-        img: 'https://picsum.photos/200/300?random=3',
+        img: 'https://picsum.photos/300/400?random=3',
         likes: 0,
         dislikes: 0
       }
@@ -55,21 +55,25 @@ class Cards extends React.Component {
   render () {
     let showedCard = this.state.cards[this.state.currentCard]; 
     return(
-      
       <div className='container'>
-        <button onClick={this.showNextCard}>Next</button>
+        <button onClick={this.showPrevCard} className='butt prev'></button>
 
         <div className='card'>
           <img src={showedCard.img} alt=""/>
           
-          <div id={showedCard.id} onClick={this.addLike}>Like</div>
-          <span>LikesCount {showedCard.likes}</span>
+          <div className='likesBlock'>
+            <div className='likeBlock'>
+              <div className="likesCount"> {showedCard.likes}</div>
+              <div className='like-image' id={showedCard.id} onClick={this.addLike}> </div>
+            </div>
+            <div className='dislikeBlock'>
+              <div className="likesCount">{showedCard.dislikes}</div>
+              <div className='dislike-image' id={showedCard.id} onClick={this.addDisLike}></div>
+            </div>
+          </div>
 
-          <div  id={showedCard.id} onClick={this.addDisLike}>DisLike</div>
-          <span>DissLikesCount {showedCard.dislikes}</span>
         </div>
-
-        <button onClick={this.showPrevCard}>Previos</button>
+        <button onClick={this.showNextCard} className='butt next'></button>
       </div>
     )
   }
